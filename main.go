@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	functions "example.com/packages/assignment_1/functions"
+	functions "example.com/packages/Golang_KBTU/functions"
 )
 
 func main() {

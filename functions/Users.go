@@ -13,7 +13,7 @@ func (c *Collection) SignUp(username, password string) {
 	ok := false
 	// if c.GetUser(username) == true {
 	for _, elem := range c.Users {
-		// fmt.Print(elem.Username, " ")
+		fmt.Print(elem.Username, " ")
 		if elem.Username == username {
 			ok = true
 			// break
