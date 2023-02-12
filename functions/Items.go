@@ -12,7 +12,7 @@ func (c *Collection) ItemPush(name string, price, rating float64) {
 	c.ItemIterator++
 	item := Item{c.ItemIterator, name, price, rating}
 	c.Items = append(c.Items, item)
-	fmt.Println("Item:", item, "was created successfully.")
+	fmt.Println("Item:", item.ItemName, "was created successfully.")
 }
 
 func (c *Collection) SearchItemsByName(name string) []Item {
@@ -49,12 +49,12 @@ func (c *Collection) SetRating(rating float64, id int) {
 	for _, item := range c.Items {
 		if item.Id == id {
 			item.Rating = rating
-			fmt.Println("rating of item:", item, "has successfully changed.")
+			fmt.Println("rating of item:", item.ItemName, "has successfully changed.")
 			return
 		}
 	}
 	fmt.Println("item was not found.")
-	// return
+	return
 }
 
 func (c *Collection) ItemTakeData() {

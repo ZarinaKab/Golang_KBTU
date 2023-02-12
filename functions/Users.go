@@ -9,11 +9,11 @@ import (
 )
 
 func (c *Collection) SignUp(username, password string) {
-	c.UserIterator++
 	ok := false
+	c.UserIterator++
 	// if c.GetUser(username) == true {
 	for _, elem := range c.Users {
-		fmt.Print(elem.Username, " ")
+		// fmt.Print(elem.Username, " ")
 		if elem.Username == username {
 			ok = true
 			// break
@@ -33,7 +33,7 @@ func (c *Collection) SignUp(username, password string) {
 
 func (c *Collection) SignIn(username, password string) bool {
 	for _, col := range c.Users {
-		if col.Username == username && col.Password == password {
+		if col.Username == username && col.Password == password && c.GetUser(username) != true{
 			fmt.Println("User:", username, "authorized.")
 			return true
 		}
@@ -42,17 +42,17 @@ func (c *Collection) SignIn(username, password string) bool {
 	return false
 }
 
-// func (c *Collection) GetUser(username string) []User {
-// 	var result []User
-// 	for _, user := range c.Users {
-// 		if user.Username == username {
-// 			result = append(result, user)
-// 			// return true
-// 		}
-// 	}
-// 	// return false
-// 	return result
-// }
+func (c *Collection) GetUser(username string) bool {
+	// var result []User
+	for _, user := range c.Users {
+		if user.Username == username {
+			// result = append(result, user)
+			return true
+		}
+	}
+	return false
+	// return result
+}
 
 func (c *Collection) UserTakeData() {
 	// var collect []string

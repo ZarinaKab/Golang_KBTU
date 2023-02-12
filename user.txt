@@ -1,3 +1,7 @@
 1, Kanat, 5468
 2, Zarina, 654
 3, Dimash, 546
+4, Almas, 54
+5, Elaman, 1
+6, Ermek, 7
+7, Ospan, 5

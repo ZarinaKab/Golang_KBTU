@@ -64,17 +64,23 @@ func main() {
 					fmt.Print("Write item price you want to sort: ")
 					fmt.Scanln(&price)
 					for _, element := range sms.FilterItemsByPrice(price) {
-						fmt.Println("Item: ", element.ItemName, "\nPrice: ", element.Price)
+						fmt.Println("Item:", element.ItemName, ", Price:", element.Price)
 					}
 					fmt.Println(sms.FilterItemsByPrice(price))
 				} else if itemOper == 3 {
 					fmt.Print("Write item rating you want to sort: ")
 					fmt.Scanln(&rating)
-					fmt.Println(sms.FilterItemsByRating(rating))
+					for _, element := range sms.FilterItemsByRating(rating) {
+						fmt.Println("ItemName:", element.ItemName, ", Price:", element.Price, ", Rating:", element.Rating)
+					}
+					// fmt.Println(sms.FilterItemsByRating(rating))
 				} else if itemOper == 4 {
 					fmt.Print("Write item name you want to find: ")
 					fmt.Scanln(&itemName)
-					fmt.Println(sms.SearchItemsByName(itemName))
+					for _, element := range sms.SearchItemsByName(itemName) {
+						fmt.Println("ItemName:", element.ItemName, ", Price:", element.Price, ", Rating:", element.Rating)
+					}
+					// fmt.Println(sms.SearchItemsByName(itemName))
 				} else if itemOper == 5 {
 					var itemId int
 					fmt.Println("To set rating of existing item, you have to write id and rating.")
@@ -94,7 +100,7 @@ func main() {
 			var isSure string
 			fmt.Scanln(&isSure)
 			if isSure == "yes" {
-				// sms.UserSaveData()
+				sms.UserSaveData()
 				// sms.ItemSaveData()
 				fmt.Println("Come back again!!!")
 				break
