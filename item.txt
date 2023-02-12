@@ -1,0 +1,6 @@
+1, coffee, 400, 3
+2, napkins, 250, 2
+3, champagne, 25000, 5
+4, mop, 1500, 1
+5, trash, 3900, 1
+6, pendant, 19920, 3
