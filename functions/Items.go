@@ -30,6 +30,7 @@ func (c *Collection) FilterItemsByPrice(price float64) []Item {
 	for _, item := range c.Items {
 		if item.Price <= price {
 			result = append(result, item)
+
 		}
 	}
 	return result

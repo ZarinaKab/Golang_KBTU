@@ -33,7 +33,7 @@ func (c *Collection) SignUp(username, password string) {
 
 func (c *Collection) SignIn(username, password string) bool {
 	for _, col := range c.Users {
-		if col.Username == username && col.Password == password && c.GetUser(username) != true{
+		if col.Username == username && col.Password == password && c.GetUser(username) == true{
 			fmt.Println("User:", username, "authorized.")
 			return true
 		}

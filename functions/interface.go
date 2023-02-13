@@ -3,7 +3,7 @@ package functions
 type UserManager interface {
 	SignUp(username, password string)
 	SignIn(username, password string) bool
-	GetUser(username string) []User
+	GetUser(username string) bool
 }
 
 type ItemManager interface {

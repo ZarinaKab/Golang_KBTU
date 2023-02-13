@@ -36,7 +36,7 @@ func main() {
 			fmt.Scanln(&password)
 			// sms.SignIn(name, password)
 			if sms.SignIn(name, password) {
-				// fmt.Println("Alright, you can manage the items!")
+				fmt.Println("Alright, you can manage the items!")
 				isAuthorized = true
 			} else {
 				fmt.Println("The data you have wrote is invalid! Try again.")
