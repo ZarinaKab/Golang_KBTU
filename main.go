@@ -108,8 +108,12 @@ func main() {
 				continue
 			}
 		} else if operation == 5 {
-			isAuthorized = false
-			fmt.Println("You have just logged out.")
+			if isAuthorized == false {
+				fmt.Println("You are not authorized before!")
+			} else {
+				isAuthorized = false
+				fmt.Println("You have just logged out.")
+			}
 		} else {
 			fmt.Println("Operation doesn't exist, try again.")
 		}
